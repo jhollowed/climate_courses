@@ -108,19 +108,7 @@
 ;=====
 ; declare the output directory and file
 ;=====
- dir   = "/glade/scratch/$USER/CAM_Jan22_bw_dry_fv09L30_jw06/run/"
- files = dir+"CAM_Jan22_bw_dry_fv09L30_jw06.cam.h0.0001-01-01-00000.nc"
-
-;=====
-; declare a label for the dycore that appears in the plot
-;=====
- dycore   = "FV09L30"               ; label in plot, name your dycore
-
-; dycore   = "EULT85L30"           ; label in plot, name your dycore
-; dycore   = "FV3c96L30"            ; label in plot, name your dycore
-; dycore   = "MPAS120L30"           ; label in plot, name your dycore
-; dycore   = "SEne30L30"            ; label in plot, name your dycore
-; dycore   = "all_dycores"          ; label in plot, name your dycore
+ files = dir+histf
 
 ;=====
 ; read command line settings: output format

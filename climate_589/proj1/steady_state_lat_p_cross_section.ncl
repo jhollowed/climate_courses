@@ -21,10 +21,29 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 begin
 
 ;=====
+; check cmd args
+;=====
+
+if (.not. isvar("dir")) then
+      print("arg dir not found in argv")
+      exit
+end if
+
+if (.not. isvar("histf")) then
+      print("arg histf not found in argv")
+      exit
+end if
+
+if (.not. isvar("dycore")) then
+      print("arg dycore not found in argv")
+      exit
+end if
+
+
+;=====
 ; declare the CAM directory and file
 ;=====
-  dir = "/glade/scratch/$USER/CAM_Jan22_bw_dry_fv09L30_jw06/run/"
-  data = dir+"CAM_Jan22_bw_dry_fv09L30_jw06.cam.h0.0001-01-01-00000.nc"
+  data = dir+histf
 
 ;=====
 ; declare a label for the dycore that appears in the plot
